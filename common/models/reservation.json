@@ -1,0 +1,64 @@
+{
+  "name": "Reservation",
+  "plural": "Reservations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "dateFinish": {
+      "type": "date",
+      "required": true
+    },
+    "totalTime": {
+      "type": "string",
+      "required": true
+    },
+    "bayId": {
+      "type": "any",
+      "required": true
+    },
+    "appUserId": {
+      "type": "any",
+      "required": true
+    },
+    "cardId": {
+      "type": "any",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true,
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "AppUser": {
+      "type": "belongsTo",
+      "model": "AppUser",
+      "foreignKey": "appUserId"
+    },
+    "Bay": {
+      "type": "belongsTo",
+      "model": "Bay",
+      "foreignKey": "bayId"
+    },
+    "creditCard": {
+      "type": "belongsTo",
+      "model": "CreditCard",
+      "foreignKey": "cardId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

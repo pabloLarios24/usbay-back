@@ -1,0 +1,7 @@
+{
+  "db": {
+    "url": "mongodb://localhost:27017/unisun",
+    "name": "db",
+    "connector": "mongodb"
+  }
+}

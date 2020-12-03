@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AppUser": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Vehicle": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Company": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Bay": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Rate": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Reservation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "CreditCard": {
+    "dataSource": "db",
+    "public": true
+  }
+}

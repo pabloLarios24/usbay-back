@@ -1,0 +1,45 @@
+{
+  "name": "CreditCard",
+  "plural": "CreditCards",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "lastFour": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "appUserId": {
+      "type": "any"
+    },
+    "companyId": {
+      "type": "any"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "companyId"
+    },
+    "appUser": {
+      "type": "belongsTo",
+      "model": "AppUser",
+      "foreignKey": "appUserId"
+    },
+    "reservations": {
+      "type": "hasMany",
+      "model": "Reservations",
+      "foreignKey": "cardId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
